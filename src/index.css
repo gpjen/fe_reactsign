@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #eeeeee;
 }
 
 code {
@@ -12,6 +13,10 @@ code {
     monospace;
 }
 
-.bgEeeeeee {
-  background-color: #eeeeee;
+.detailCard {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.detailCard:hover {
+  opacity: 0.8;
 }
