@@ -2,8 +2,6 @@ import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-import { ModalLogin } from "./ModalLogin";
-
 export default function NavbarTop() {
   const isLogin = false;
   return (
@@ -12,8 +10,7 @@ export default function NavbarTop() {
         <Navbar.Brand as={Link} to="">
           <img
             src="https://cdn-icons-png.flaticon.com/512/1216/1216733.png?w=740"
-            width={30}
-            height30
+            height={30}
             alt="icon"
           />
         </Navbar.Brand>
@@ -31,10 +28,22 @@ export default function NavbarTop() {
             </Nav.Link>
             {isLogin ? (
               <Nav.Link as={Link} to="profile">
-                Profile
+                <img
+                  src="https://cdn.dribbble.com/userupload/2669446/file/original-ee4e7360a209eda6a4517eced70b0a0e.jpg?filters:format(webp)?filters%3Aformat%28webp%29=&compress=1&resize=1600x1200"
+                  alt="profile"
+                  height={30}
+                  className="rounded-circle px-3 mx-3"
+                />
               </Nav.Link>
             ) : (
-              <ModalLogin />
+              <Nav.Link
+                as={Link}
+                to="login"
+                className="btn btn-sm btn-outline-warning px-3 mx-3 "
+              >
+                {" "}
+                Login
+              </Nav.Link>
             )}
           </Nav>
         </Navbar.Collapse>
