@@ -6,16 +6,18 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";
+import LoginRegister from "./pages/LoginRegister";
 
 function App() {
   return (
     <BrowserRouter>
       <NavbarTop />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/profile" element={<Profile />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/product" element={<Product />}></Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/login" element={<LoginRegister />} />
       </Routes>
     </BrowserRouter>
   );
